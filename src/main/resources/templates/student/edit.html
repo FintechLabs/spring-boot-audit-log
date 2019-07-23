@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout/layout}"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Student List</title>
+</head>
+<body>
+<section layout:fragment="content">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col">
+                    <h5 class="card-title">Update Student</h5>
+                </div>
+                <div class="col">
+                    <a th:href="@{/student/list}" class="float-right btn btn-outline-primary btn-sm">List</a>
+                </div>
+            </div>
+            <form th:action="@{/student/update}" method="post">
+                <input type="hidden" name="id" th:value="${student.getId()}">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName"
+                           placeholder="Enter First Name" th:value="${student.getFirstName()}">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter Last Name"
+                           th:value="${student.getLastName()}">
+                </div>
+                <div class="form-group">
+                    <label for="emailAddress">Email address</label>
+                    <input type="email" class="form-control" id="emailAddress" name="emailAddress"
+                           placeholder="Enter Email Address" th:value="${student.getEmailAddress()}">
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber"
+                           placeholder="Enter Phone Number" th:value="${student.getPhoneNumber()}">
+                </div>
+                <button type="submit" class="btn btn-primary">Update</button>
+            </form>
+        </div>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Spring Boot Auditing</title>
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" th:href="@{/css/sticky-footer-navbar.css}">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <!-- Fixed navbar -->
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" th:href="@{/}">Home</a>
+            </nav>
+        </header>
+        <br/>
+        <br/>
+        <div class="container">
+            <section layout:fragment="content">
+                <p>Page content goes here</p>
+            </section>
+        </div>
+        <footer class="footer">
+            <div class="container text-center">
+                <span class="text-muted">&copy; FintechLabs Technologies</span>
+            </div>
+        </footer>
+    </body>
+</html>
