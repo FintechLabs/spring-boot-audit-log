@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class AuditLogsApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(AuditLogsApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(AuditLogsApplication.class, args);
+    }
 
 }
